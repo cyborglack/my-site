@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lightweb</title>
+    <!-- Подключаем CSS файл со стилями -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Подключаем Font Awesome для красивых иконок (бесплатно) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- ШАПКА САЙТА (меню навигации) -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <a href="#">lightweb.</a>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home">главная</a></li>
+                <li><a href="#about">обо мне</a></li>
+                <li><a href="#services">услуги</a></li>
+                <li><a href="#portfolio">портфолио</a></li>
+                <li><a href="#contact">контакты</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- ГЛАВНЫЙ ЭКРАН (Hero Section) -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>привет, я cyborg, специалист в сфере осинт.</h1>
+            <p>помогу вам защититься от злоумышленников и от доксеров.</p>
+            <a href="#portfolio" class="btn">работы</a>
+        </div>
+    </section>
+
+    <!-- РАЗДЕЛ "ОБО МНЕ" -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">обо мне</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>кто я такой?</h3>
+                    <p>я осинтер. со своей командой защитим вас от нежити интернета.</p>
+                    <p>наша цель проста - помочь мирным и подзаработать денег.</p>
+                </div>
+                <div class="about-stats">
+                    <div class="stat">
+                        <div class="stat-number">5+</div>
+                        <div class="stat-text">лет в км</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">1000+</div>
+                        <div class="stat-text">отзывов</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">100%</div>
+                        <div class="stat-text">результата</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- РАЗДЕЛ "УСЛУГИ" -->
+    <section id="services" class="services">
+        <div class="container">
+            <h2 class="section-title">что я предлагаю</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <i class="fas fa-code service-icon"></i>
+                    <h3>деф (защита)</h3>
+                    <p>встаю на вашу сторону и разбираюсь с накалом в кф.</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-paint-brush service-icon"></i>
+                    <h3>обучалки</h3>
+                    <p>смогу обучить вас навыкам и знаниям осинта.</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-mobile-alt service-icon"></i>
+                    <h3>адаптация</h3>
+                    <p>после небольшого количества времени вы сможете стать профессионалом.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- РАЗДЕЛ "ПОРТФОЛИО" -->
+    <section id="portfolio" class="portfolio">
+        <div class="container">
+            <h2 class="section-title">мои работы</h2>
+            <div class="portfolio-grid">
+                <div class="portfolio-item">
+                    <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=400" alt="Проект 1">
+                    <div class="portfolio-overlay">
+                        <h3>работа 1</h3>
+                        <p>помощь</p>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400" alt="Проект 2">
+                    <div class="portfolio-overlay">
+                        <h3>работа 2</h3>
+                        <p>обучение</p>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <img src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=400" alt="Проект 3">
+                    <div class="portfolio-overlay">
+                        <h3>работа 3</h3>
+                        <p>валидация</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- РАЗДЕЛ "КОНТАКТЫ" -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">свяжитесь со мной</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <p>тг: @toncyborg</p>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <p>тима:
+                            @exellentkm
+                        </p>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <p>welcome to lightwebb</p>
+                    </div>
+                </div>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-vk"></i></a>
+                    <a href="#"><i class="fab fa-telegram"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-github"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ПОДВАЛ САЙТА -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026. light.web</p>
+        </div>
+    </footer>
+</body>
+</html>
