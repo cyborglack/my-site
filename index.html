@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="style.css">
     <!-- Font Awesome для иконок -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- AOS анимация -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
 
@@ -29,9 +31,9 @@
                     </ul>
                 </nav>
                 <!-- Кнопка переключения темы -->
-<button id="theme-toggle" class="theme-toggle" aria-label="Переключить тему">
-    <i class="fas fa-moon"></i>
-</button>
+                <button id="theme-toggle" class="theme-toggle" aria-label="Переключить тему">
+                    <i class="fas fa-moon"></i>
+                </button>
             </div>
         </div>
     </header>
@@ -40,9 +42,9 @@
     <section id="home" class="hero">
         <div class="container">
             <div class="hero__content">
-                <h1 class="hero__title">Создаём сайты<br>от идеи до результата</h1>
-                <p class="hero__subtitle">Разработка, дизайн, поддержка. Всё в одном месте.</p>
-                <a href="#contact" class="btn btn--primary">Написать нам</a>
+                <h1 class="hero__title" data-aos="fade-up" data-aos-delay="200">Создаём сайты<br>от идеи до результата</h1>
+                <p class="hero__subtitle" data-aos="fade-up" data-aos-delay="400">Разработка, дизайн, поддержка. Всё в одном месте.</p>
+                <a href="#contact" class="btn btn--primary" data-aos="fade-up" data-aos-delay="600">Написать нам</a>
             </div>
         </div>
     </section>
@@ -50,22 +52,22 @@
     <!-- О НАС -->
     <section id="about" class="about">
         <div class="container">
-            <h2 class="section-title">О нас</h2>
+            <h2 class="section-title" data-aos="fade-down">О нас</h2>
             <div class="about__content">
-                <div class="about__text">
+                <div class="about__text" data-aos="fade-right">
                     <p>Мы — команда разработчиков, которые любят своё дело. Создаём сайты любой сложности: от простых визиток до интернет-магазинов.</p>
                     <p>Наш подход: честность, сроки, качество. Работаем с душой и вниманием к деталям.</p>
                 </div>
                 <div class="about__stats">
-                    <div class="stat-item">
+                    <div class="stat-item" data-aos="zoom-in" data-aos-delay="100">
                         <div class="stat-number">5+</div>
                         <div class="stat-label">человек в команде</div>
                     </div>
-                    <div class="stat-item">
+                    <div class="stat-item" data-aos="zoom-in" data-aos-delay="200">
                         <div class="stat-number">1000ч+</div>
                         <div class="stat-label">кода</div>
                     </div>
-                    <div class="stat-item">
+                    <div class="stat-item" data-aos="zoom-in" data-aos-delay="300">
                         <div class="stat-number">100%</div>
                         <div class="stat-label">результат</div>
                     </div>
@@ -77,19 +79,19 @@
     <!-- УСЛУГИ -->
     <section id="services" class="services">
         <div class="container">
-            <h2 class="section-title">Услуги</h2>
+            <h2 class="section-title" data-aos="fade-down">Услуги</h2>
             <div class="services__grid">
-                <div class="service-card">
+                <div class="service-card" data-aos="flip-left" data-aos-delay="100">
                     <i class="fas fa-code service-card__icon"></i>
                     <h3>Веб-разработка</h3>
                     <p>Сайты на HTML/CSS/JS, адаптив, оптимизация.</p>
                 </div>
-                <div class="service-card">
+                <div class="service-card" data-aos="flip-left" data-aos-delay="200">
                     <i class="fas fa-paint-brush service-card__icon"></i>
                     <h3>Дизайн</h3>
                     <p>Современный интерфейс, прототипы, Figma.</p>
                 </div>
-                <div class="service-card">
+                <div class="service-card" data-aos="flip-left" data-aos-delay="300">
                     <i class="fas fa-cart-shopping service-card__icon"></i>
                     <h3>Интернет-магазины</h3>
                     <p>Полный цикл: от корзины до оплаты.</p>
@@ -97,26 +99,54 @@
             </div>
         </div>
     </section>
+
+    <!-- ПОРТФОЛИО -->
+    <section id="portfolio" class="portfolio">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-down">Наши работы</h2>
+            <div class="portfolio__grid">
+                <div class="portfolio-item" data-aos="fade-up" data-aos-delay="100">
+                    <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=400" alt="Проект 1">
+                    <div class="portfolio-item__overlay">
+                        <h3>Сайт для стартапа</h3>
+                    </div>
+                </div>
+                <div class="portfolio-item" data-aos="fade-up" data-aos-delay="200">
+                    <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400" alt="Проект 2">
+                    <div class="portfolio-item__overlay">
+                        <h3>Интернет-магазин</h3>
+                    </div>
+                </div>
+                <div class="portfolio-item" data-aos="fade-up" data-aos-delay="300">
+                    <img src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=400" alt="Проект 3">
+                    <div class="portfolio-item__overlay">
+                        <h3>Корпоративный сайт</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- КОМАНДА -->
     <section id="team" class="team">
         <div class="container">
-            <h2 class="section-title">Команда</h2>
+            <h2 class="section-title" data-aos="fade-down">Команда</h2>
             <div class="team__grid">
-                <div class="team-member">
+                <div class="team-member" data-aos="fade-up" data-aos-delay="100">
                     <div class="team-member__photo">
                         <i class="fas fa-user-circle"></i>
                     </div>
                     <h3>cyborglack</h3>
                     <p>Fullstack-разработчик</p>
                 </div>
-                <div class="team-member">
+                <div class="team-member" data-aos="fade-up" data-aos-delay="200">
                     <div class="team-member__photo">
                         <i class="fas fa-user-circle"></i>
                     </div>
                     <h3>cyborg net</h3>
                     <p>Веб-дизайнер</p>
                 </div>
-                <div class="team-member">
+                <div class="team-member" data-aos="fade-up" data-aos-delay="300">
                     <div class="team-member__photo">
                         <i class="fas fa-user-circle"></i>
                     </div>
@@ -130,9 +160,9 @@
     <!-- КОНТАКТЫ -->
     <section id="contact" class="contact">
         <div class="container">
-            <h2 class="section-title">Напишите нам</h2>
+            <h2 class="section-title" data-aos="fade-down">Напишите нам</h2>
             <div class="contact__content">
-                <form name="contact" method="POST" data-netlify="true" class="contact__form">
+                <form name="contact" method="POST" data-netlify="true" class="contact__form" data-aos="fade-right">
                     <div class="form-group">
                         <input type="text" name="name" placeholder="Ваше имя" required>
                     </div>
@@ -144,7 +174,7 @@
                     </div>
                     <button type="submit" class="btn btn--primary">Отправить</button>
                 </form>
-                <div class="contact__info">
+                <div class="contact__info" data-aos="fade-left">
                     <p><i class="fas fa-envelope"></i> cyborg@lightweb.online</p>
                     <div class="social-links">
                         <a href="#"><i class="fab fa-vk"></i></a>
@@ -163,14 +193,25 @@
         </div>
     </footer>
 
+    <!-- Кнопка "Наверх" -->
+    <button id="back-to-top" class="back-to-top" aria-label="Наверх">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
     <!-- СКРИПТЫ -->
     <script src="stats.js"></script>
     <script src="theme.js"></script>
     <script src="back-to-top.js"></script>
-    
-    <!-- Кнопка "Наверх" -->
-<button id="back-to-top" class="back-to-top" aria-label="Наверх">
-    <i class="fas fa-arrow-up"></i>
-</button>
+
+    <!-- AOS скрипт -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            once: true,
+            offset: 100,
+        });
+    </script>
+
 </body>
 </html>
