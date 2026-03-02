@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Блог | Lightweb студия разработки</title>
+    <!-- Подключаем CSS -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome для иконок -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- AOS анимация -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Дополнительные стили для блога -->
+    <style>
+        .blog-header {
+            margin-top: 120px;
+            text-align: center;
+            padding: 40px 0;
+        }
+        
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 30px;
+            padding: 40px 0 80px;
+        }
+        
+        .blog-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .blog-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.2);
+        }
+        
+        .blog-card__image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        
+        .blog-card__content {
+            padding: 20px;
+        }
+        
+        .blog-card__date {
+            color: #667eea;
+            font-size: 0.9rem;
+            margin-bottom: 10px;
+            display: block;
+        }
+        
+        .blog-card__title {
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+            color: #333;
+        }
+        
+        .blog-card__excerpt {
+            color: #666;
+            margin-bottom: 15px;
+            line-height: 1.5;
+        }
+        
+        .blog-card__link {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+        }
+        
+        .blog-card__link:hover {
+            gap: 8px;
+        }
+        
+        /* Тёмная тема */
+        body.dark-theme .blog-card {
+            background: #2a2a2a;
+        }
+        
+        body.dark-theme .blog-card__title {
+            color: #f0f0f0;
+        }
+        
+        body.dark-theme .blog-card__excerpt {
+            color: #ccc;
+        }
+        
+        /* Адаптация */
+        @media (max-width: 768px) {
+            .blog-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .blog-header {
+                margin-top: 100px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ШАПКА САЙТА (такая же, как на главной) -->
+    <header class="header">
+        <div class="container">
+            <div class="header__inner">
+                <div class="logo">
+                    <a href="index.html">light.web</a>
+                </div>
+                <nav class="nav">
+                    <ul class="nav__list">
+                        <li><a href="index.html#home">Главная</a></li>
+                        <li><a href="index.html#about">О нас</a></li>
+                        <li><a href="index.html#services">Услуги</a></li>
+                        <li><a href="index.html#portfolio">Работы</a></li>
+                        <li><a href="index.html#team">Команда</a></li>
+                        <li><a href="blog.html" class="active">Блог</a></li>
+                        <li><a href="index.html#contact">Контакты</a></li>
+                    </ul>
+                </nav>
+                <!-- Кнопка переключения темы -->
+                <button id="theme-toggle" class="theme-toggle" aria-label="Переключить тему">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- ЗАГОЛОВОК БЛОГА -->
+    <section class="blog-header">
+        <div class="container">
+            <h1 class="section-title" data-aos="fade-down">Блог</h1>
+            <p class="hero__subtitle" data-aos="fade-up" data-aos-delay="200">Полезные статьи о веб-разработке, дизайне и технологиях</p>
+        </div>
+    </section>
+
+    <!-- СПИСОК СТАТЕЙ -->
+    <section class="blog-list">
+        <div class="container">
+            <div class="blog-grid">
+                <!-- Статья 1 -->
+                <article class="blog-card" data-aos="fade-up" data-aos-delay="100">
+                    <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=400" alt="Программирование" class="blog-card__image">
+                    <div class="blog-card__content">
+                        <span class="blog-card__date">28 февраля 2026</span>
+                        <h2 class="blog-card__title">С чего начать изучение веб-разработки</h2>
+                        <p class="blog-card__excerpt">Пошаговое руководство для новичков: HTML, CSS, JavaScript — что учить и в каком порядке.</p>
+                        <a href="#" class="blog-card__link">Читать далее <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+
+                <!-- Статья 2 -->
+                <article class="blog-card" data-aos="fade-up" data-aos-delay="200">
+                    <img src="https://images.unsplash.com/photo-1581291518633-83b4ebd1d83e?w=400" alt="Дизайн" class="blog-card__image">
+                    <div class="blog-card__content">
+                        <span class="blog-card__date">15 февраля 2026</span>
+                        <h2 class="blog-card__title">Тренды веб-дизайна 2026</h2>
+                        <p class="blog-card__excerpt">Минимализм, тёмные темы, анимация, 3D-элементы — что сейчас в моде и как это использовать.</p>
+                        <a href="#" class="blog-card__link">Читать далее <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+
+                <!-- Статья 3 -->
+                <article class="blog-card" data-aos="fade-up" data-aos-delay="300">
+                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400" alt="SEO" class="blog-card__image">
+                    <div class="blog-card__content">
+                        <span class="blog-card__date">5 февраля 2026</span>
+                        <h2 class="blog-card__title">SEO для начинающих: как продвинуть сайт</h2>
+                        <p class="blog-card__excerpt">Простые шаги, которые помогут вашему сайту подняться в поиске без больших вложений.</p>
+                        <a href="#" class="blog-card__link">Читать далее <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+
+                <!-- Статья 4 -->
+                <article class="blog-card" data-aos="fade-up" data-aos-delay="400">
+                    <img src="https://images.unsplash.com/photo-1522542550221-31fd19575a2d?w=400" alt="Скорость" class="blog-card__image">
+                    <div class="blog-card__content">
+                        <span class="blog-card__date">20 января 2026</span>
+                        <h2 class="blog-card__title">Как ускорить загрузку сайта</h2>
+                        <p class="blog-card__excerpt">Оптимизация картинок, минификация кода, кэширование — практические советы.</p>
+                        <a href="#" class="blog-card__link">Читать далее <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+
+                <!-- Статья 5 -->
+                <article class="blog-card" data-aos="fade-up" data-aos-delay="500">
+                    <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=400" alt="Инструменты" class="blog-card__image">
+                    <div class="blog-card__content">
+                        <span class="blog-card__date">10 января 2026</span>
+                        <h2 class="blog-card__title">Топ-10 инструментов веб-разработчика</h2>
+                        <p class="blog-card__excerpt">VS Code, Git, Figma, Chrome DevTools — что реально пригодится в работе.</p>
+                        <a href="#" class="blog-card__link">Читать далее <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+
+                <!-- Статья 6 -->
+                <article class="blog-card" data-aos="fade-up" data-aos-delay="600">
+                    <img src="https://images.unsplash.com/photo-1555421689-491a97ff2040?w=400" alt="Клиенты" class="blog-card__image">
+                    <div class="blog-card__content">
+                        <span class="blog-card__date">25 декабря 2025</span>
+                        <h2 class="blog-card__title">Как общаться с заказчиками</h2>
+                        <p class="blog-card__excerpt">Советы по ведению переговоров, составлению ТЗ и сдаче проектов.</p>
+                        <a href="#" class="blog-card__link">Читать далее <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- ПОДВАЛ -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 light.web. Все права защищены.</p>
+        </div>
+    </footer>
+
+    <!-- Кнопка "Наверх" -->
+    <button id="back-to-top" class="back-to-top" aria-label="Наверх">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- СКРИПТЫ -->
+    <script src="stats.js"></script>
+    <script src="theme.js"></script>
+    <script src="back-to-top.js"></script>
+
+    <!-- AOS скрипт -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            once: true,
+            offset: 100,
+        });
+    </script>
+</body>
+</html>
