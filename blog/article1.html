@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>С чего начать изучение веб-разработки | Блог Lightweb</title>
+    <!-- Подключаем CSS -->
+    <link rel="stylesheet" href="../style.css">
+    <!-- Font Awesome для иконок -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- AOS анимация -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Дополнительные стили для статьи -->
+    <style>
+        .article-header {
+            margin-top: 120px;
+            padding: 40px 0 20px;
+            text-align: center;
+        }
+        
+        .article-meta {
+            color: #667eea;
+            font-size: 1rem;
+            margin: 10px 0;
+        }
+        
+        .article-image {
+            width: 100%;
+            max-height: 500px;
+            object-fit: cover;
+            border-radius: 12px;
+            margin: 30px 0;
+        }
+        
+        .article-content {
+            max-width: 800px;
+            margin: 0 auto 60px;
+            line-height: 1.8;
+            font-size: 1.1rem;
+        }
+        
+        .article-content h2 {
+            margin: 40px 0 20px;
+            color: #333;
+        }
+        
+        .article-content p {
+            margin-bottom: 20px;
+            color: #555;
+        }
+        
+        .article-content ul, .article-content ol {
+            margin-bottom: 20px;
+            padding-left: 20px;
+        }
+        
+        .article-content li {
+            margin-bottom: 10px;
+        }
+        
+        .article-nav {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 60px;
+            padding-top: 30px;
+            border-top: 1px solid #eee;
+        }
+        
+        .article-nav a {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .article-nav a:hover {
+            gap: 15px;
+        }
+        
+        .back-to-blog {
+            display: inline-block;
+            margin-bottom: 20px;
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        
+        .back-to-blog i {
+            margin-right: 5px;
+        }
+        
+        /* Тёмная тема */
+        body.dark-theme .article-content h2 {
+            color: #f0f0f0;
+        }
+        
+        body.dark-theme .article-content p {
+            color: #ccc;
+        }
+        
+        body.dark-theme .article-nav {
+            border-top-color: #444;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ШАПКА САЙТА -->
+    <header class="header">
+        <div class="container">
+            <div class="header__inner">
+                <div class="logo">
+                    <a href="../index.html">light.web</a>
+                </div>
+                <nav class="nav">
+                    <ul class="nav__list">
+                        <li><a href="../index.html#home">Главная</a></li>
+                        <li><a href="../index.html#about">О нас</a></li>
+                        <li><a href="../index.html#services">Услуги</a></li>
+                        <li><a href="../index.html#portfolio">Работы</a></li>
+                        <li><a href="../index.html#team">Команда</a></li>
+                        <li><a href="../blog.html">Блог</a></li>
+                        <li><a href="../index.html#contact">Контакты</a></li>
+                    </ul>
+                </nav>
+                <!-- Кнопка переключения темы -->
+                <button id="theme-toggle" class="theme-toggle" aria-label="Переключить тему">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- ССЫЛКА НАЗАД К БЛОГУ -->
+    <div class="container">
+        <a href="../blog.html" class="back-to-blog" data-aos="fade-right">
+            <i class="fas fa-arrow-left"></i> Вернуться к списку статей
+        </a>
+    </div>
+
+    <!-- СТАТЬЯ -->
+    <section class="article-header">
+        <div class="container">
+            <h1 class="section-title" data-aos="fade-down">С чего начать изучение веб-разработки</h1>
+            <div class="article-meta" data-aos="fade-up" data-aos-delay="100">
+                <span><i class="far fa-calendar-alt"></i> 28 февраля 2026</span>
+                <span style="margin-left: 20px;"><i class="far fa-folder"></i> Обучение</span>
+                <span style="margin-left: 20px;"><i class="far fa-clock"></i> 5 мин чтения</span>
+            </div>
+        </div>
+    </section>
+
+    <div class="container">
+        <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=1200" alt="Программирование" class="article-image" data-aos="zoom-in" data-aos-delay="200">
+
+        <div class="article-content" data-aos="fade-up" data-aos-delay="300">
+            <p>Веб-разработка — одна из самых востребованных и доступных профессий в IT. Но с чего начать новичку? В этой статье я расскажу о пошаговом плане, который поможет вам войти в профессию без лишней боли.</p>
+            
+            <h2>1. HTML и CSS — фундамент</h2>
+            <p>Начните с изучения HTML и CSS. Это язык разметки и стилей, с помощью которых создаётся внешний вид сайта. Не пытайтесь выучить всё сразу — достаточно basics: теги, атрибуты, селекторы, Flexbox, Grid.</p>
+            <p><strong>Ресурсы:</strong> HTML Academy, Codecademy, YouTube-каналы.</p>
+            
+            <h2>2. JavaScript — оживляем сайт</h2>
+            <p>После того как научитесь верстать, переходите к JavaScript. Это язык, который делает сайты интерактивными. Начните с переменных, функций, событий, потом переходите к DOM-дереву.</p>
+            
+            <h2>3. Git и GitHub</h2>
+            <p>Обязательно изучите систему контроля версий Git и сервис GitHub. Это стандарт в индустрии — вы сможете сохранять свои проекты и показывать их работодателям.</p>
+            
+            <h2>4. Практика, практика и ещё раз практика</h2>
+            <p>Сделайте несколько своих проектов: лендинг, портфолио, небольшой интернет-магазин. Это лучший способ закрепить знания.</p>
+            
+            <h2>5. Фреймворки и дальнейшее развитие</h2>
+            <p>Когда почувствуете уверенность, изучите React, Vue или Angular. Это повысит вашу ценность как специалиста.</p>
+            
+            <div class="article-nav">
+                <a href="#"><i class="fas fa-arrow-left"></i> Предыдущая статья</a>
+                <a href="article2.html">Следующая статья <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- ПОДВАЛ -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 light.web. Все права защищены.</p>
+        </div>
+    </footer>
+
+    <!-- Кнопка "Наверх" -->
+    <button id="back-to-top" class="back-to-top" aria-label="Наверх">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- СКРИПТЫ -->
+    <script src="../stats.js"></script>
+    <script src="../theme.js"></script>
+    <script src="../back-to-top.js"></script>
+
+    <!-- AOS скрипт -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            once: true,
+            offset: 100,
+        });
+    </script>
+</body>
+</html>
